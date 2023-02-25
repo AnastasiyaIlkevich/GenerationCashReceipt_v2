@@ -1,0 +1,58 @@
+2023-02-19 18:21:51,500 INFO ru.clevertec.ilkevich.receipt.ReceiptApplication [main] Starting ReceiptApplication using Java 17.0.3.1 with PID 4360 (C:\_загрузки\receipt\build\classes\java\main started by user in C:\_загрузки\receipt)
+2023-02-19 18:21:51,505 INFO ru.clevertec.ilkevich.receipt.ReceiptApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-02-19 18:21:53,053 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-02-19 18:21:53,288 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 208 ms. Found 4 JPA repository interfaces.
+2023-02-19 18:21:54,941 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-02-19 18:21:54,958 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2023-02-19 18:21:54,959 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-02-19 18:21:55,563 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2023-02-19 18:21:55,564 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 3984 ms
+2023-02-19 18:21:56,055 INFO org.flywaydb.core.internal.license.VersionPrinter [main] Flyway Community Edition 9.10.0 by Redgate
+2023-02-19 18:21:56,056 INFO org.flywaydb.core.internal.license.VersionPrinter [main] See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#9.10.0
+2023-02-19 18:21:56,056 INFO org.flywaydb.core.internal.license.VersionPrinter [main] 
+2023-02-19 18:21:56,086 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2023-02-19 18:21:56,419 INFO com.zaxxer.hikari.pool.HikariPool [main] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4c3de38e
+2023-02-19 18:21:56,422 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-02-19 18:21:56,449 INFO org.flywaydb.core.internal.database.base.BaseDatabaseType [main] Database: jdbc:postgresql://localhost:5432/receiptdb (PostgreSQL 13.4)
+2023-02-19 18:21:56,520 INFO org.flywaydb.core.internal.command.DbValidate [main] Successfully validated 4 migrations (execution time 00:00.042s)
+2023-02-19 18:21:56,617 INFO org.flywaydb.core.internal.command.DbMigrate [main] Current version of schema "public": 2.0.2
+2023-02-19 18:21:56,619 INFO org.flywaydb.core.internal.command.DbMigrate [main] Schema "public" is up to date. No migration necessary.
+2023-02-19 18:21:56,750 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-02-19 18:21:56,819 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 6.1.6.Final
+2023-02-19 18:21:57,037 WARN org.hibernate.orm.deprecation [main] HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2023-02-19 18:21:57,246 INFO SQL dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-02-19 18:21:58,632 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-02-19 18:21:58,651 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-02-19 18:21:59,279 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-02-19 18:21:59,744 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-02-19 18:21:59,759 INFO ru.clevertec.ilkevich.receipt.ReceiptApplication [main] Started ReceiptApplication in 9.271 seconds (process running for 10.855)
+2023-02-19 18:22:56,371 INFO org.apache.coyote.http11.Http11Processor [http-nio-8080-exec-2] Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x020x000x010x000x010xfc0x030x030xa50xe30xd10xe5N0x840xfb0xdd0x9dcS0xcb20xa20xa0ag,0x040x7fD0xad0x9b0x99If0x82EX0x13}O ]. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:419)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:272)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-02-19 18:22:56,371 INFO org.apache.coyote.http11.Http11Processor [http-nio-8080-exec-1] Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x020x000x010x000x010xfc0x030x0380x98s0x98%0xd0iPC0xe90x0c0xcbc0xee0xf7E0xf00x12^0xf9Z0x8e0xc10x120x09m0x97VG0x8e0xa4z ]. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:419)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:272)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-02-19 18:23:44,481 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-8080-exec-6] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-19 18:23:44,481 INFO org.springframework.web.servlet.DispatcherServlet [http-nio-8080-exec-6] Initializing Servlet 'dispatcherServlet'
+2023-02-19 18:23:44,483 INFO org.springframework.web.servlet.DispatcherServlet [http-nio-8080-exec-6] Completed initialization in 0 ms
+2023-02-19 18:23:44,548 WARN org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver [http-nio-8080-exec-6] Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.lang.Long'; For input string: "shop"]

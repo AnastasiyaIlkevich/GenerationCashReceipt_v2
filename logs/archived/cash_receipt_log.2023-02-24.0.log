@@ -1,0 +1,75 @@
+2023-02-24 19:40:51,867 INFO ru.clevertec.ilkevich.receipt.ReceiptApplicationTests [Test worker] Starting ReceiptApplicationTests using Java 17.0.3.1 with PID 3732 (started by user in C:\_загрузки\receipt)
+2023-02-24 19:40:51,878 INFO ru.clevertec.ilkevich.receipt.ReceiptApplicationTests [Test worker] No active profile set, falling back to 1 default profile: "default"
+2023-02-24 19:40:53,168 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [Test worker] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-02-24 19:40:53,308 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [Test worker] Finished Spring Data repository scanning in 123 ms. Found 4 JPA repository interfaces.
+2023-02-24 19:40:54,068 INFO org.flywaydb.core.internal.license.VersionPrinter [Test worker] Flyway Community Edition 9.10.0 by Redgate
+2023-02-24 19:40:54,069 INFO org.flywaydb.core.internal.license.VersionPrinter [Test worker] See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#9.10.0
+2023-02-24 19:40:54,070 INFO org.flywaydb.core.internal.license.VersionPrinter [Test worker] 
+2023-02-24 19:40:54,093 INFO com.zaxxer.hikari.HikariDataSource [Test worker] HikariPool-1 - Starting...
+2023-02-24 19:40:54,429 INFO com.zaxxer.hikari.pool.HikariPool [Test worker] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3d104c9b
+2023-02-24 19:40:54,434 INFO com.zaxxer.hikari.HikariDataSource [Test worker] HikariPool-1 - Start completed.
+2023-02-24 19:40:54,469 INFO org.flywaydb.core.internal.database.base.BaseDatabaseType [Test worker] Database: jdbc:postgresql://localhost:5432/receiptdb (PostgreSQL 13.4)
+2023-02-24 19:40:54,570 INFO org.flywaydb.core.internal.command.DbValidate [Test worker] Successfully validated 4 migrations (execution time 00:00.058s)
+2023-02-24 19:40:54,631 INFO org.flywaydb.core.internal.command.DbMigrate [Test worker] Current version of schema "public": 2.0.2
+2023-02-24 19:40:54,633 INFO org.flywaydb.core.internal.command.DbMigrate [Test worker] Schema "public" is up to date. No migration necessary.
+2023-02-24 19:40:54,835 INFO org.hibernate.jpa.internal.util.LogHelper [Test worker] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-02-24 19:40:55,002 INFO org.hibernate.Version [Test worker] HHH000412: Hibernate ORM core version 6.1.6.Final
+2023-02-24 19:40:55,377 WARN org.hibernate.orm.deprecation [Test worker] HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2023-02-24 19:40:55,816 INFO SQL dialect [Test worker] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-02-24 19:40:57,309 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [Test worker] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-02-24 19:40:57,323 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [Test worker] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-02-24 19:40:58,318 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [Test worker] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-02-24 19:40:58,978 INFO ru.clevertec.ilkevich.receipt.ReceiptApplicationTests [Test worker] Started ReceiptApplicationTests in 7.73 seconds (process running for 9.557)
+2023-02-24 19:40:59,363 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-02-24 19:40:59,367 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2023-02-24 19:40:59,374 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2023-02-24 19:41:22,383 INFO ru.clevertec.ilkevich.receipt.ReceiptApplicationTests [Test worker] Starting ReceiptApplicationTests using Java 17.0.3.1 with PID 1532 (started by user in C:\_загрузки\receipt)
+2023-02-24 19:41:22,389 INFO ru.clevertec.ilkevich.receipt.ReceiptApplicationTests [Test worker] No active profile set, falling back to 1 default profile: "default"
+2023-02-24 19:41:24,398 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [Test worker] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-02-24 19:41:24,617 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [Test worker] Finished Spring Data repository scanning in 185 ms. Found 4 JPA repository interfaces.
+2023-02-24 19:41:26,016 INFO org.flywaydb.core.internal.license.VersionPrinter [Test worker] Flyway Community Edition 9.10.0 by Redgate
+2023-02-24 19:41:26,017 INFO org.flywaydb.core.internal.license.VersionPrinter [Test worker] See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#9.10.0
+2023-02-24 19:41:26,018 INFO org.flywaydb.core.internal.license.VersionPrinter [Test worker] 
+2023-02-24 19:41:26,050 INFO com.zaxxer.hikari.HikariDataSource [Test worker] HikariPool-1 - Starting...
+2023-02-24 19:41:26,550 INFO com.zaxxer.hikari.pool.HikariPool [Test worker] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1537c744
+2023-02-24 19:41:26,556 INFO com.zaxxer.hikari.HikariDataSource [Test worker] HikariPool-1 - Start completed.
+2023-02-24 19:41:26,610 INFO org.flywaydb.core.internal.database.base.BaseDatabaseType [Test worker] Database: jdbc:postgresql://localhost:5432/receiptdb (PostgreSQL 13.4)
+2023-02-24 19:41:26,742 INFO org.flywaydb.core.internal.command.DbValidate [Test worker] Successfully validated 4 migrations (execution time 00:00.083s)
+2023-02-24 19:41:26,805 INFO org.flywaydb.core.internal.command.DbMigrate [Test worker] Current version of schema "public": 2.0.2
+2023-02-24 19:41:26,807 INFO org.flywaydb.core.internal.command.DbMigrate [Test worker] Schema "public" is up to date. No migration necessary.
+2023-02-24 19:41:27,096 INFO org.hibernate.jpa.internal.util.LogHelper [Test worker] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-02-24 19:41:27,276 INFO org.hibernate.Version [Test worker] HHH000412: Hibernate ORM core version 6.1.6.Final
+2023-02-24 19:41:27,859 WARN org.hibernate.orm.deprecation [Test worker] HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2023-02-24 19:41:28,453 INFO SQL dialect [Test worker] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-02-24 19:41:30,865 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [Test worker] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-02-24 19:41:30,884 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [Test worker] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-02-24 19:41:32,282 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [Test worker] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-02-24 19:41:33,242 INFO ru.clevertec.ilkevich.receipt.ReceiptApplicationTests [Test worker] Started ReceiptApplicationTests in 12.088 seconds (process running for 15.728)
+2023-02-24 19:41:33,712 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-02-24 19:41:33,716 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2023-02-24 19:41:33,727 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2023-02-24 23:50:56,355 INFO ru.clevertec.ilkevich.receipt.ReceiptApplicationTests [Test worker] Starting ReceiptApplicationTests using Java 17.0.3.1 with PID 2628 (started by user in C:\_загрузки\receipt)
+2023-02-24 23:50:56,360 INFO ru.clevertec.ilkevich.receipt.ReceiptApplicationTests [Test worker] No active profile set, falling back to 1 default profile: "default"
+2023-02-24 23:50:58,280 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [Test worker] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-02-24 23:50:58,506 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [Test worker] Finished Spring Data repository scanning in 197 ms. Found 4 JPA repository interfaces.
+2023-02-24 23:50:59,803 INFO org.flywaydb.core.internal.license.VersionPrinter [Test worker] Flyway Community Edition 9.10.0 by Redgate
+2023-02-24 23:50:59,804 INFO org.flywaydb.core.internal.license.VersionPrinter [Test worker] See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#9.10.0
+2023-02-24 23:50:59,805 INFO org.flywaydb.core.internal.license.VersionPrinter [Test worker] 
+2023-02-24 23:50:59,836 INFO com.zaxxer.hikari.HikariDataSource [Test worker] HikariPool-1 - Starting...
+2023-02-24 23:51:00,514 INFO com.zaxxer.hikari.pool.HikariPool [Test worker] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@21f9c6ea
+2023-02-24 23:51:00,521 INFO com.zaxxer.hikari.HikariDataSource [Test worker] HikariPool-1 - Start completed.
+2023-02-24 23:51:00,592 INFO org.flywaydb.core.internal.database.base.BaseDatabaseType [Test worker] Database: jdbc:postgresql://localhost:5432/receiptdb (PostgreSQL 13.4)
+2023-02-24 23:51:00,764 INFO org.flywaydb.core.internal.command.DbValidate [Test worker] Successfully validated 4 migrations (execution time 00:00.098s)
+2023-02-24 23:51:00,801 INFO org.flywaydb.core.internal.command.DbMigrate [Test worker] Current version of schema "public": 2.0.2
+2023-02-24 23:51:00,803 INFO org.flywaydb.core.internal.command.DbMigrate [Test worker] Schema "public" is up to date. No migration necessary.
+2023-02-24 23:51:01,084 INFO org.hibernate.jpa.internal.util.LogHelper [Test worker] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-02-24 23:51:01,314 INFO org.hibernate.Version [Test worker] HHH000412: Hibernate ORM core version 6.1.6.Final
+2023-02-24 23:51:01,897 WARN org.hibernate.orm.deprecation [Test worker] HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2023-02-24 23:51:02,515 INFO SQL dialect [Test worker] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-02-24 23:51:05,480 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [Test worker] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-02-24 23:51:05,510 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [Test worker] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-02-24 23:51:06,757 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [Test worker] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-02-24 23:51:07,570 INFO ru.clevertec.ilkevich.receipt.ReceiptApplicationTests [Test worker] Started ReceiptApplicationTests in 12.395 seconds (process running for 15.562)
+2023-02-24 23:51:08,024 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-02-24 23:51:08,029 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2023-02-24 23:51:08,040 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.

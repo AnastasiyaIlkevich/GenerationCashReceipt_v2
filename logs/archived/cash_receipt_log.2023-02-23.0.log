@@ -1,0 +1,25 @@
+2023-02-23 14:33:35,110 INFO ru.clevertec.ilkevich.receipt.service.impl.ShopInfoServiceImplTest [Test worker] Starting ShopInfoServiceImplTest using Java 17.0.3.1 with PID 8900 (started by user in C:\_загрузки\receipt)
+2023-02-23 14:33:35,119 INFO ru.clevertec.ilkevich.receipt.service.impl.ShopInfoServiceImplTest [Test worker] No active profile set, falling back to 1 default profile: "default"
+2023-02-23 14:33:36,221 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [Test worker] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-02-23 14:33:36,358 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [Test worker] Finished Spring Data repository scanning in 121 ms. Found 4 JPA repository interfaces.
+2023-02-23 14:33:37,073 INFO org.flywaydb.core.internal.license.VersionPrinter [Test worker] Flyway Community Edition 9.10.0 by Redgate
+2023-02-23 14:33:37,074 INFO org.flywaydb.core.internal.license.VersionPrinter [Test worker] See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#9.10.0
+2023-02-23 14:33:37,074 INFO org.flywaydb.core.internal.license.VersionPrinter [Test worker] 
+2023-02-23 14:33:37,095 INFO com.zaxxer.hikari.HikariDataSource [Test worker] HikariPool-1 - Starting...
+2023-02-23 14:33:37,441 INFO com.zaxxer.hikari.pool.HikariPool [Test worker] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2bd8f7db
+2023-02-23 14:33:37,445 INFO com.zaxxer.hikari.HikariDataSource [Test worker] HikariPool-1 - Start completed.
+2023-02-23 14:33:37,480 INFO org.flywaydb.core.internal.database.base.BaseDatabaseType [Test worker] Database: jdbc:postgresql://localhost:5432/receiptdb (PostgreSQL 13.4)
+2023-02-23 14:33:37,577 INFO org.flywaydb.core.internal.command.DbValidate [Test worker] Successfully validated 4 migrations (execution time 00:00.052s)
+2023-02-23 14:33:37,622 INFO org.flywaydb.core.internal.command.DbMigrate [Test worker] Current version of schema "public": 2.0.2
+2023-02-23 14:33:37,624 INFO org.flywaydb.core.internal.command.DbMigrate [Test worker] Schema "public" is up to date. No migration necessary.
+2023-02-23 14:33:37,808 INFO org.hibernate.jpa.internal.util.LogHelper [Test worker] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-02-23 14:33:37,932 INFO org.hibernate.Version [Test worker] HHH000412: Hibernate ORM core version 6.1.6.Final
+2023-02-23 14:33:38,292 WARN org.hibernate.orm.deprecation [Test worker] HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2023-02-23 14:33:38,614 INFO SQL dialect [Test worker] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-02-23 14:33:40,051 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [Test worker] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-02-23 14:33:40,065 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [Test worker] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-02-23 14:33:40,801 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [Test worker] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-02-23 14:33:41,276 INFO ru.clevertec.ilkevich.receipt.service.impl.ShopInfoServiceImplTest [Test worker] Started ShopInfoServiceImplTest in 6.728 seconds (process running for 8.59)
+2023-02-23 14:33:41,623 INFO org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-02-23 14:33:41,628 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2023-02-23 14:33:41,636 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
