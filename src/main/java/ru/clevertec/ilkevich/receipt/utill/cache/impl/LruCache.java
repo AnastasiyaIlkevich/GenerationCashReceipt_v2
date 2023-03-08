@@ -117,4 +117,11 @@ public class LruCache<K, V> implements AbstractCache<K, V> {
         return cache.size();
     }
 
+    @Override
+    public String toString() {
+        return "LruCache{" +
+                "cache=" + cache +
+                '}';
+    }
+
 }

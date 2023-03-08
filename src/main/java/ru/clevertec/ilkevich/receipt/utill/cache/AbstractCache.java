@@ -15,4 +15,6 @@ public interface AbstractCache<K, V> {
     int size();
 
     boolean containsKey(K key);
+
+    String toString();
 }

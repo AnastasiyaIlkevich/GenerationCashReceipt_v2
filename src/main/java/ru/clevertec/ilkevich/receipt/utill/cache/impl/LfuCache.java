@@ -160,4 +160,10 @@ public class LfuCache<K, V> implements AbstractCache<K, V> {
         return cache.size();
     }
 
+    @Override
+    public String toString() {
+        return "LfuCache{" +
+                "cache=" + cache +
+                '}';
+    }
 }
