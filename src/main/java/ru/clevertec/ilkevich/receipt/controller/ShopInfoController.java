@@ -1,8 +1,12 @@
 package ru.clevertec.ilkevich.receipt.controller;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.Min;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import ru.clevertec.ilkevich.receipt.dto.ShopUpdateDto;
 import ru.clevertec.ilkevich.receipt.model.ShopInfo;
@@ -30,38 +34,43 @@ public class ShopInfoController {
     }
 
     @GetMapping
-    private List<ShopInfo> getAllShopInfo() {
+    private ResponseEntity<List<ShopInfo>> getAllShopInfo() {
         log.debug(ShopInfoController.class + ". Start method getAllShopInfo");
-        return abstractService.getAll();
+        List<ShopInfo> shopInfoList = abstractService.getAll();
+        return ResponseEntity.ok(shopInfoList);
     }
 
     @GetMapping("/{id}")
-    public ShopInfo getShopInfoById(@PathVariable("id") Long id) {
+    public ResponseEntity<ShopInfo> getShopInfoById(@PathVariable("id") @Min(1) Long id) {
         log.info("Start method getShopInfoById with id = " + id);
-        return (ShopInfo) abstractService.findById(id);
+        ShopInfo shopInfo = (ShopInfo) abstractService.findById(id);
+        return ResponseEntity.ok(shopInfo);
     }
 
     @PostMapping()
-    public void saveShopInfo(@RequestBody ShopUpdateDto shopDto) {
+    public ResponseEntity<?> saveShopInfo(@Valid @RequestBody ShopUpdateDto shopDto) {
         ShopInfo shopInfo = shopDto.toShopInfo();
         log.info("Start method saveShopInfo " + shopInfo);
         abstractService.save(shopInfo);
+        return ResponseEntity.status(HttpStatus.CREATED).build();
     }
 
     @PutMapping("/{id}")
-    public ShopUpdateDto updateShopInfo(@PathVariable("id") Long id,
-                                        @RequestBody ShopUpdateDto shopDto) {
+    public ResponseEntity<ShopUpdateDto> updateShopInfo(@PathVariable("id") @Min(1) Long id,
+                                                        @Valid @RequestBody ShopUpdateDto shopDto) {
         shopDto.setId(id);
         ShopInfo shopInfo = shopDto.toShopInfo();
         log.info(String.format("Start method updateShopInfo with id = %d " +
                 "and shopInfo = %s", id, shopInfo));
-        return shopDto.fromShopInfo((ShopInfo) abstractService.update(shopInfo));
+        shopDto = shopDto.fromShopInfo((ShopInfo) abstractService.update(shopInfo));
+        return ResponseEntity.ok(shopDto);
     }
 
     @DeleteMapping("/{id}")
-    public void deleteShopInfoById(@PathVariable("id") Long id) {
+    public ResponseEntity<?> deleteShopInfoById(@PathVariable("id") @Min(1) Long id) {
         log.info("Start method deleteShopInfoById with id = " + id);
         abstractService.deleteById(id);
+        return ResponseEntity.noContent().build();
     }
 
 }
