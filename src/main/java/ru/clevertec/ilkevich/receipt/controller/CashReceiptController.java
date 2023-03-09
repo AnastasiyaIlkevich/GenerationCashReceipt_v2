@@ -1,8 +1,12 @@
 package ru.clevertec.ilkevich.receipt.controller;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.Min;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import ru.clevertec.ilkevich.receipt.dto.CashReceiptSaveDto;
 import ru.clevertec.ilkevich.receipt.dto.CashReceiptUpdateDto;
@@ -31,27 +35,30 @@ public class CashReceiptController {
     }
 
     @GetMapping
-    private List<CashReceipt> getAllCashReceipt() {
+    private ResponseEntity<List<CashReceipt>> getAllCashReceipt() {
         log.debug(CashReceiptController.class + ". Start method getAllCashReceipt");
-        return abstractService.getAll();
+        List<CashReceipt> cashReceiptList = abstractService.getAll();
+        return ResponseEntity.ok(cashReceiptList);
     }
 
     @GetMapping("/{id}")
-    public CashReceipt getCashReceiptById(@PathVariable("id") Long id) {
+    public ResponseEntity<CashReceipt> getCashReceiptById(@PathVariable("id") @Min(1) Long id) {
         log.info("Start method getCashReceiptById with id = " + id);
-        return (CashReceipt) abstractService.findById(id);
+        CashReceipt cashReceipt = (CashReceipt) abstractService.findById(id);
+        return ResponseEntity.ok(cashReceipt);
     }
 
     @PostMapping()
-    public void saveNewCashReceiptWithDefaultStore(@RequestBody CashReceiptSaveDto cashReceiptDto) {
+    public ResponseEntity<?> saveNewCashReceiptWithDefaultStore(@Valid @RequestBody CashReceiptSaveDto cashReceiptDto) {
         CashReceipt cashReceipt = cashReceiptDto.toCashReceipt();
         log.info("Start method saveNewCashReceiptWithDefaultStore " + cashReceipt);
         abstractService.save(cashReceipt);
+        return ResponseEntity.status(HttpStatus.CREATED).build();
     }
 
     @PostMapping("/shop/{id}")
-    public void saveNewCashReceiptWithStoreId(@PathVariable("id") Long id,
-                                              @RequestBody CashReceiptSaveDto cashReceiptDto) {
+    public ResponseEntity<?> saveNewCashReceiptWithStoreId(@PathVariable("id") @Min(1) Long id,
+                                                           @Valid @RequestBody CashReceiptSaveDto cashReceiptDto) {
         CashReceipt cashReceipt = cashReceiptDto.toCashReceipt();
         ShopInfo shopInfo = new ShopInfo();
         shopInfo.setId(id);
@@ -59,21 +66,24 @@ public class CashReceiptController {
         log.info(String.format("Start method saveNewCashReceiptWithStoreId id shop = %d, " +
                 "cashReceipt = %s ", id, cashReceipt));
         abstractService.save(cashReceipt);
+        return ResponseEntity.status(HttpStatus.CREATED).build();
     }
 
     @PutMapping("/{id}")
-    public CashReceiptUpdateDto updateCashReceipt(@PathVariable("id") Long id,
-                                                  @RequestBody CashReceiptUpdateDto receiptUpdateDto) {
+    public ResponseEntity<CashReceiptUpdateDto> updateCashReceipt(@PathVariable("id") @Min(1) Long id,
+                                                                  @Valid @RequestBody CashReceiptUpdateDto receiptUpdateDto) {
         receiptUpdateDto.setCheckNumber(id);
         CashReceipt cashReceipt = receiptUpdateDto.toCashReceipt();
         log.info(String.format("Start method updateCashReceipt with id = %d " +
                 "and cashReceipt = %s", id, cashReceipt));
-        return receiptUpdateDto.fromCashReceipt((CashReceipt) abstractService.update(cashReceipt));
+        receiptUpdateDto = receiptUpdateDto.fromCashReceipt((CashReceipt) abstractService.update(cashReceipt));
+        return ResponseEntity.ok(receiptUpdateDto);
     }
 
     @DeleteMapping("/{id}")
-    public void deleteCashReceiptById(@PathVariable("id") Long id) {
+    public ResponseEntity<?> deleteCashReceiptById(@PathVariable("id") @Min(1) Long id) {
         log.info("Start method deleteCashReceiptById with id = " + id);
         abstractService.deleteById(id);
+        return ResponseEntity.noContent().build();
     }
 }
