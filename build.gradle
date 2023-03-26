@@ -28,6 +28,9 @@ dependencies {
 	compileOnly 'org.projectlombok:lombok:1.18.24'
 	annotationProcessor "org.projectlombok:lombok:1.18.24"
 
+	//PDF
+	implementation 'com.itextpdf:itextpdf:5.5.13.3'
+
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testCompileOnly 'org.projectlombok:lombok:1.18.24'
 	testAnnotationProcessor 'org.projectlombok:lombok:1.18.24'
